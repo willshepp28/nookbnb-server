@@ -17,13 +17,16 @@
     "format": "npx prettier --write ."
   },
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>/src/test/jest.setup.js"],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/test/jest.setup.js"
+    ],
     "testEnvironment": "node"
   },
   "dependencies": {
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.33.0"
   },
   "devDependencies": {
