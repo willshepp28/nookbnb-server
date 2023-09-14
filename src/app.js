@@ -8,6 +8,10 @@ application.get('/', (request, response) => {
     return response.json({ message: 'Success'})
 });
 
+application.get('/v2', (request, response) => {
+    return response.json({ message: 'Success'})
+});
+
 if(process.env.NODE_ENV !== 'test') {
     application.listen(PORT, () => {
         console.log(`Server running on port ${PORT}`)
