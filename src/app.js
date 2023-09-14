@@ -9,7 +9,7 @@ application.get('/', (request, response) => {
 });
 
 application.get('/v2', (request, response) => {
-    return response.json({ message: 'Success'})
+    return response.json({ message: 'Succss'})
 });
 
 if(process.env.NODE_ENV !== 'test') {
