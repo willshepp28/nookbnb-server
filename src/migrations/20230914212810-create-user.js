@@ -4,9 +4,8 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Users', {
       id: {
-        allowNull: false,
-        primaryKey: true,
         type: Sequelize.UUID,
+        primaryKey: true,
         defaultValue: Sequelize.UUIDV4,
       },
       email: {
@@ -39,6 +38,18 @@ module.exports = {
       city: Sequelize.STRING,
       state: Sequelize.STRING,
       country: Sequelize.STRING,
+      timezone: Sequelize.STRING,
+      isActive: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true,
+      },
+      failedLoginAttempts: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+      },
+      gender: Sequelize.STRING,
+      occupation: Sequelize.STRING,
+      preferences: Sequelize.JSON,
       bio: Sequelize.TEXT,
       isSuspended: Sequelize.BOOLEAN,
       preferredContactMethod: Sequelize.ENUM('Email', 'Phone', 'SMS'),
