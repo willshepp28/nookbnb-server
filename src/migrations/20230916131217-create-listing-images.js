@@ -2,26 +2,21 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("ListingAmenities", {
+    await queryInterface.createTable("ListingImages", {
       id: {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
       },
+      imageUrl: {
+        type: Sequelize.STRING,
+      },
+      isFeatured: {
+        type: Sequelize.BOOLEAN,
+      },
       listingId: {
         type: Sequelize.UUID,
-        references: {
-          model: "Listings",
-          key: "id",
-        },
-      },
-      amenityId: {
-        type: Sequelize.UUID,
-        references: {
-          model: "Amenities",
-          key: "id",
-        },
       },
       createdAt: {
         allowNull: false,
@@ -34,6 +29,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("ListingAmenities");
+    await queryInterface.dropTable("ListingImages");
   },
 };

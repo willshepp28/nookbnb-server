@@ -1,69 +1,69 @@
-'use strict';
+"use strict";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Addresses', {
+    await queryInterface.createTable("Addresses", {
       id: {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4
+        defaultValue: Sequelize.UUIDV4,
       },
       country: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
       street: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
       city: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
       state: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
       zipCode: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
       longitude: {
         type: Sequelize.DOUBLE,
-        allowNull: true
+        allowNull: true,
       },
       latitude: {
         type: Sequelize.DOUBLE,
-        allowNull: true
+        allowNull: true,
       },
       geolocation: {
-        type: Sequelize.GEOMETRY('POINT', 4326),
-        allowNull: true
+        type: Sequelize.GEOMETRY("POINT", 4326),
+        allowNull: true,
       },
       locality: {
         type: Sequelize.STRING,
-        allowNull: true
+        allowNull: true,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Addresses');
-  }
+    await queryInterface.dropTable("Addresses");
+  },
 };

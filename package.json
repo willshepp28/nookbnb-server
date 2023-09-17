@@ -12,6 +12,7 @@
     "test:watch": "jest --watch",
     "migrate": "npx sequelize-cli db:migrate",
     "seed:all": "sequelize-cli db:seed:all",
+    "seed:all:undo": "sequelize db:seed:undo:all",
     "deploy": "git push heroku main",
     "push:deploy": "git push && yarn deploy",
     "format": "npx prettier --write ."

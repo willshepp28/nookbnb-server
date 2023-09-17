@@ -1,58 +1,58 @@
-'use strict';
+"use strict";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Listings', {
+    await queryInterface.createTable("Listings", {
       id: {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4
+        defaultValue: Sequelize.UUIDV4,
       },
       title: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       description: {
         type: Sequelize.TEXT,
       },
       checkIn: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       checkOut: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       maxGuests: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       bedrooms: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       bathrooms: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       minAmount: {
-        type: Sequelize.FLOAT
+        type: Sequelize.FLOAT,
       },
       maxAmount: {
-        type: Sequelize.FLOAT
+        type: Sequelize.FLOAT,
       },
       cancellationPolicy: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       isAvailable: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Listings');
-  }
+    await queryInterface.dropTable("Listings");
+  },
 };

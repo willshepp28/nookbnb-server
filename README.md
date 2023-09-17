@@ -1,6 +1,5 @@
 ![logo](https://github.com/willshepp28/nookbnb-client/assets/28759252/07b26a14-d15e-43f9-a490-aaf82187a682)
 
-
 ## Overview
 
 An online hub based on the principles of the sharing economy, where property owners can advertise their homes as vacation stays, and tourists can find suitable accommodations.

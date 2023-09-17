@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable("Users", {
       id: {
         type: Sequelize.UUID,
         primaryKey: true,
@@ -22,11 +22,11 @@ module.exports = {
       phoneNumber: Sequelize.STRING,
       language: {
         type: Sequelize.STRING,
-        defaultValue: 'English',
+        defaultValue: "English",
       },
       currency: {
         type: Sequelize.STRING,
-        defaultValue: 'USD',
+        defaultValue: "USD",
       },
       dateOfBirth: Sequelize.DATE,
       age: Sequelize.INTEGER,
@@ -52,7 +52,7 @@ module.exports = {
       preferences: Sequelize.JSON,
       bio: Sequelize.TEXT,
       isSuspended: Sequelize.BOOLEAN,
-      preferredContactMethod: Sequelize.ENUM('Email', 'Phone', 'SMS'),
+      preferredContactMethod: Sequelize.ENUM("Email", "Phone", "SMS"),
       lastLogin: Sequelize.DATE,
       termsAccepted: Sequelize.BOOLEAN,
       externalIds: Sequelize.JSON,
@@ -67,6 +67,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Users');
-  }
+    await queryInterface.dropTable("Users");
+  },
 };
